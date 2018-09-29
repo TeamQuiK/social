@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.add_post {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+.post {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 550px;
+}
+.post button {
+    width: 100%;
+    color: white;
+    height: 35px;
+    border: none;
+    background: #0F0F0F;
+    border-radius: 5px;
+    box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    transition: 0.3s;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+.post button:hover {
+    border: 1px solid #0F0F0F;
+    background: white;
+    color: #0F0F0F;
+}
+.button_input {
+    display: flex;
+    margin: 0;
+    width: 100%;
+}
+.post input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border: 1px solid #BEC4C9;
+    border-radius: 10px;
+    padding: 5px;
+      box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
+}
+
+.posts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.new_post {
+    width: 100%;
+    background: white;
+    box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
+    margin-top: 50px;
+}
+.submit {
+    width: 100%;
+}
+
+.post_user_info_photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url(http://fandea.ru/upload/000/u1/037/00ec1617.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 500px;
+    left: 150px;
+}
+
+.kek {
+    margin-left: 65px;
+    margin-top: 13px;
+    color: currentColor;
+    font-weight: 900;
+    font-size: 20px;
+}
+#message {
+    width: 100%;
+    height: 190px;
+    border: none;
+    border: 1px solid #BEC4C9;
+    border-radius: 10px;
+    padding: 15px 130px;
+    box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
+    margin-left: 89px;
+}
+
+.post_friend_info_photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url(http://fandea.ru/upload/000/u1/037/00ec1617.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 330px;
+    left: 950px;
+}
+.kek {
+    margin-left: 65px;
+    margin-top: 45px;
+    color: currentColor;
+    font-weight: 900;
+    font-size: 20px;
+}
+#message_friend {
+    width: 100%;
+    height: 190px;
+    border: none;
+    border: 1px solid #BEC4C9;
+    border-radius: 10px;
+    padding: 15px 130px;
+    box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
+    margin-left: 75px;
+    
+}
+.head {
+    background-color: black;
+    height: 85px;
+}
+.back {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 900;
+    margin-left: 30px;
+    position: relative;
+    top: 15px;
+    font-size: 23px;
+}
+.back:hover {
+    color: brown;
+}

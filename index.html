@@ -1,44 +1,133 @@
 <!DOCTYPE html>
  <html>
   <head>
-     <title>TEST</title>
+     <title>FUCK</title>
       <meta charset="utf-8">
       <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
      </head>
      <body>
-         <header>
+
+
+<script type="text/javascript">
+  $('.my').change(function() {
+    if ($(this).val() != '') $(this).prev().text('Выбрано файлов: ' + $(this)[0].files.length);
+    else $(this).prev().text('Выберите файлы');
+});
+</script>
          
+
+
       <div class="head">
-        <div class="logo">
-            <a href="#" class="home">Главная</a>
-            <a href="#" class="test">Тест</a>
-            <a href="#" class="tset">Тест</a>
-          </div> 
+        <div class="first_head_container">
+        <h1 class="logo"><a href="profile.php"><i class="fas fa-home"></i></a></h1>
+        <h1 class="logo"><a href="news.php"><i class="far fa-newspaper"></i></a></h1>
+        </div>
+        <div class="second_head_container">
+        <!-- <h1 ><i class="fas fa-exclamation"></i></h1> -->
+        <a href="includes/logout.php">Выход из аккаунта</a>   
          </div>
-             </header>
+        </div>
          <main>
-        <div class="saidbar">
-         <div class="avatar">
-          <div class="status">
-                 <p class="teststatus">lalalalalallallalala</p>
-              <p class="admin">Admin</p>
-            <p class="online">ОНЛАЙН</p>
-              
-              </div>
-             </div>
+        <div class="sidebar">
+         <div class="user_photo"></div>
+          <div class="user_status">
+            <p class="on-line"> Online</p>
+              <a href="#" class="add">Добавить в друзья</a>
+              <a href="#" class="send">Написать сообщение</a>
+           </div>
          </div>
-             <input placeholder="Что у вас нового">
-             <div class="stena">
-              <div class="zapisi">
-                <div class="avatarka">
-                  <div class="like">
-                    <p class="odmen">Admin</p>
-                      <p class="only">Online</p>
-                      <p class="textinfo">ЛАЛАЛАЛАЛАЛАЛ<br>АЛАЛАЛАЛАЛАЛАЛА</p>
-                     </div>
-                    </div>
-                  </div>
-                 </div>
+
+<!-- Обновление статуса -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#form_status').submit(function(event) {
+      event.preventDefault();
+      var status = $('#status_input').val();
+      $('.status').load("includes/status.php", 
+      {
+        status: status
+        })
+    });
+  });
+
+
+</script>
+
+
+
+         <div class="content">
+
+          <div class="user_info">
+            <h2 class="user_name_surname">
+                 </h2>
+            <div class="status_container">
+            <p class="status"></p>
+            <a class="status_add_button"> <i class="fas fa-pen"></i></a>
+            <form class="form_status" action="includes/status.php" method="POST" id="form_status">
+              <input type="text" name="status" value="<?php echo $_SESSION['logged_user']->status;?>" id="status_input">
+              <button id="change_status" type="submit">Изменить</button>
+              <p id="status_message"></p>
+            </form>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="add_post">
+            <form class="post" action="includes/post.php" method="POST">
+                <div class="button_input">
+              <input type="text" name="post_text" id='post_input' placeholder="Что у вас нового?">
+         <div class="dada">
+            <label for="myfile" class="chous"><i class="fas fa-camera"></i></label>
+            <input type="file" class="my" id="myfile" name="post_image" multiple="multiple"/>
+          </div>
+        </div>  
+              <button type="submit">Поделиться</button>
+              <p id="new_post_message"></p>
+
+            </form>
+          </div>
+
+
+         <div class="posts">
+<script type="text/javascript">
+</script>
+<!-- LOAD    
+       <script type="text/javascript">
+
+            $(document).ready(function() {
+            setInterval(function load() {
+                $('.posts').load('includes/fast.php');
+              }, 100);
+            });
+          </script> -->
+          <!-- AJAX -->
+          <script type="text/javascript">
+            $(document).ready(function() {
+            var getPosts =  function() {
+                        $.ajax({
+                          url:'includes/fast.php',
+                          success: (function (response) {
+                            $('.posts').html(response);
+                          }),
+                          error: (function(){
+                          })
+                        });
+                        }
+
+              setInterval(getPosts, 400);
+            });
+          </script>
+         </div>
+
+
+
+       </div>
              </main>
  </body>
 </html>

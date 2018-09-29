@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 }
 
 body {
@@ -8,155 +9,348 @@ body {
 }
 
 .head {
-    background-color: #fff;
+    background-color: #0F0F0F;
     height: 80px;
     box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+.head a {
+    color: white;
+}
+.logo {
+    color: white;
+    margin-left: 25%;
+}
+.logo i{
+    transition: 0.5s;
+}
+.logo i:hover {
+    transform: rotate(20deg);
+}
+.first_head_container {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.home {
-    text-decoration: none;
-    font-size: 20px;
-    color: black;
-    position: absolute;
-    left: 400px;
-    top: 28px;
+.second_head_container {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-
-.home:hover {
-    color: blueviolet;
+.second_head_container a {
+    margin-right: 16%;
 }
-
-.test {
-    text-decoration: none;
-    font-size: 20px;
-    color: black;
-    position: absolute;
-    left: 500px;
-    top: 28px;
-}
-
-.test:hover {
-color: blueviolet;
-}
-
-.tset {
-    text-decoration: none;
-    font-size: 20px;
-    color: black;
-    position: absolute;
-    left: 580px;
-    top: 28px;
-}
-
-.tset:hover {
-    color: blueviolet;
-}
-
-.status {
+.user_status {
     background-color: #fff;
-    width: 600px;
-    height: 150px;
-    /*margin-left: 560px;
-    margin-top: 100px;*/
-    position: absolute;
-    left: 360px;
-    bottom: 350px;
     box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 20%;
+
+}
+main {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
 }
 
-.teststatus {
-    font-weight: 900;
-    position: absolute;
-    left: 234px;
-    top: 73px;
-    font-size: 23px;
-}
-
-.saidbar {
+.sidebar {
     background-color: #fff;
-    width: 300px;
-    height: 500px;
-    /*margin-right: 650px;*/
-    position: absolute;
-    top: 119px;
-    left: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 550px;
     box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
-}
+    margin-left: 10%;
 
-.avatar {
-    background-image: url('../img/avatar.jpg');
-    height: 330px;
 }
-
-.admin {
-    position: absolute;
-    right: 783px;
-    top: 360px;
-    font-family: sans-serif;
-    font-size: 24px;
-}
-
-.online {
-    position: absolute;
-    right: 780px;
-    top: 410px;
-    font-family: sans-serif;
+.on-line {
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
     font-weight: 800;
-    font-size: 17px;
+    color: #56D55F;
 }
 
-.stena {
-    background-color: #fff;
-    height: 500px;
-    width: 350px;
-    float: right;
-    margin-top: 350px;
-    margin-right: 110px;
+.add {
+    text-decoration: none;
+    background-color: #e5ebf1;
+    padding: 7px 16px 8px;
+    color: #484E53;
     box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
-}
-
-.avatarka {
-    background-image: url('../img/avatar.jpg');
-    /*width: 30px;
-    height: 50px;*/
-    margin-top: 20px;
-    margin-left: 15px;
-    /*border-radius: 10px;*/
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fafbfc;
-    background-color: inherit;
-    background-position: center;
-}
-
-.odmen {
-    font-size: 20px;
     font-weight: 900;
-    font-family: sans-serif;
-    margin-left: 60px;
+}
+.add:hover {
+    color: black;
+}
+.send {
+    text-decoration: none;
+    background-color: #6a98cc;
+    padding: 7px 16px 8px;
+    color: #fff;
+    box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
+    font-weight: 900;
+}
+.user_photo {
+    background-image: url('http://fandea.ru/upload/000/u1/037/00ec1617.jpg');
+    height: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.content {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 7%;
+}
+.user_info {
+    width: 100%;
+    height: 150px;
+    background: white;
+    box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.user_name_surname {
+    color: black;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    font-size: 30px;
+    line-height: 25px;
+    font-weight: 400;
+    width: 95%;
+    margin-left: 5%;
+    z-index: 1;
+}
+.status {
+    margin-left: 5%;
+    color: #484E53;
+}
+.add_post {
+    width: 100%;
     margin-top: 25px;
+    display: flex;
+    justify-content: center;
 }
-
-.only {
+.post {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.post button {
+    width: 20%;
+    color: white;
+    height: 35px;
+    border: none;
+    background: #0F0F0F;
+    border-radius: 5px;
+    box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
+    font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    font-weight: 900;
-    font-family: sans-serif;
-    color: darkgrey;
-    margin-left: 60px;
+    transition: 0.3s;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.post button:hover {
+    border: 1px solid #0F0F0F;
+    background: white;
+    color: #0F0F0F;
+}
+.button_input {
+    display: flex;
+    margin: 0;
+}
+.post input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border: 1px solid #BEC4C9;
+    border-radius: 10px;
+    padding: 5px;
+      box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
 }
 
-.textinfo {
-    color: darkslateblue;
-    font-weight: 900;
-    font-family: sans-serif;
-    margin-left: 70px;
+.posts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.new_post {
+    width: 100%;
+    background: white;
+    box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
+    margin-top: 50px;
+}
+.post_user_info {
+    width: 95%;
+    margin-top: 10px;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5%;
+    border-bottom: 1px solid #CCCCCC;
+}
+.post_user_info_photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 5%;
+    background-image: url('http://fandea.ru/upload/000/u1/037/00ec1617.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.post_user_info_container {
+    width: 70%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.post_user_info_name {
+    font-size: 26px;
+    color: #2a5885;
+}
+.post_user_info_date {
+    color: #939393;
+}
+.post_content{
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+.post_text {
+    width: 100%;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    font-weight: 400;
+}
+.post_photo {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.post_photo img {
+    flex: 1 1 calc(45%);
+    margin: 10px;
+    margin-left: 0;
+}
+@media screen and (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar {
+        margin: 0;
+        width: 100%;
+    }
+    .content {
+        margin: 0;
+        margin-top: 50px;
+        width: 100%;
+    }
 }
 
-#post_field {
-    height: 300px;
-    width: 300px;
-    background-color: #fff;
+
+
+/*ДЛЯ INPUT TYPE FILE*/
+.chous {
+    width: 70px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 14px/50px Tahoma;
+    transition: all 0.18s ease-in-out;
+    border: 1px solid #0F0F0F;
+    background: linear-gradient(to top right, #0F0F0F, #6B6B6B 20%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0)) top right/500% 500%;
+    color: #0F0F0F;
+
+}
+.chous:hover {
+    color: white;
+    background-position: bottom left;
+}
+    
+.my {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: absolute;
+  left: -200px;
+}
+.status_container {
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1;
+    width: 95%;
+}
+.status_add_button {
+    margin-left: 1%;
+    color: #484E53;
+}
+.status_add_button i {
+    transition: 0.2s;
+}
+.status_add_button i:hover {
+    color: grey;
+    transform: rotate(45deg);
+}
+.form_status{
+    z-index: 0;
     position: absolute;
-    top: 200px;
+    margin-left: 2.5%;
+    display: none;
+    height: 30px;
+    width: 100%;
+    align-items: center;
+}
+.form_status input {
+    border: none;
+    border: 1px solid #484E53;
+    border-radius: 5px;
+    padding: 5px;
+}
+.form_status button {
+    color: #484E53;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    box-shadow: -1px 4px 20px -8px rgba(0,0,0,0.62);
+    font-size: 15px;
+    transition: 0.3s;
+    margin-right: 5px;
+    border: 1px solid #484E53;
+    margin-left: 10px;
+    height: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.form_status button:hover{
+    background: #484E53;
+    color: white;
+}
+#status_message {
+    color: red;
+    font-size: 15px;
+}
+#new_post_message {
+    color: green;
+    font-size: 15px;
 }
